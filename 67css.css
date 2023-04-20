@@ -1,0 +1,44 @@
+/* style dla akapitów */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* style dla nagłówka H1 */
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  /* akapit pierwszy */
+p:first-letter {
+    font-size: calc(110pt + var(--birth-month));
+    color: var(--paragraph-1-color-initial);
+  }
+  p:not(:first-child) {
+    font-size: calc(15pt + var(--name-length));
+    color: var(--paragraph-1-color);
+  }
+  
+  /* akapit drugi */
+  p:first-letter + span {
+    font-size: calc(110pt + var(--birth-month));
+    color: var(--paragraph-2-color-initial);
+  }
+  p:not(:first-child) + span {
+    font-size: calc(13pt + var(--surname-length));
+    color: var(--paragraph-2-color);
+  }
+  h1:first-letter {
+    font-size: 50px;
+    color: silver;
+  }
+  h1:not(:first-child):first-letter {
+    color: purple;
+  }
+  p::first-line {
+    font-weight: bold;
+    font-style: italic;
+  }
